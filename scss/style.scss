@@ -1,14 +1,15 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
-$font-primary: 'Work Sans',Arial, sans-serif;
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-family-sans-serif: 'Poppins',Arial, sans-serif;
 
 $white: #fff;
-$black: #000000;
+$black: #010e40;
 // $darken: #3a4348;
 
-$primary: #446afc;
-$secondary: #446afc;
+$primary: #010e40;
+$secondary: #010e40;
 
 
 
@@ -47,7 +48,7 @@ body {
 	font-size: 16px;
 	line-height: 1.8;
 	font-weight: 400;
-	color: lighten($black,60%);
+    color: $white;
 	&.menu-show {
 		overflow: hidden;
 		position: fixed;
@@ -66,9 +67,9 @@ a {
 }
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-	line-height: 1.5;
-	color: rgba(0,0,0,.8);
-	font-weight: 400;
+        line-height: 1.5;
+        color: rgba(255,255,255,.8);
+        font-weight: 400;
 }
 
 .text-primary {
