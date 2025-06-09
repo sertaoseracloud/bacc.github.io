@@ -1,4 +1,3 @@
-// Snowflake SVG path for a perfect snowflake
 function drawSnowflake(ctx, x, y, r, angle) {
     ctx.save();
     ctx.translate(x, y);
@@ -11,7 +10,6 @@ function drawSnowflake(ctx, x, y, r, angle) {
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.lineTo(0, -r);
-        // Side branches
         for (let j = 1; j < 3; j++) {
             let branchLen = r * (0.3 + 0.15 * j);
             let branchY = -r * (j / 3);
@@ -32,17 +30,23 @@ let width, height;
 let flakes = [];
 
 function resizeCanvas() {
-    width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
+    // Faz o canvas preencher a tela inteira
+    width = window.innerWidth;
+    height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
 }
-window.addEventListener('resize', resizeCanvas);
+window.addEventListener('resize', () => {
+    resizeCanvas();
+    createFlakes();
+});
 resizeCanvas();
 
 function createFlakes() {
     flakes = [];
-    for (let i = 0; i < 40; i++) {
+    // Número de flocos proporcional à largura da tela
+    const flakeCount = Math.max(30, Math.floor(width / 25));
+    for (let i = 0; i < flakeCount; i++) {
         flakes.push({
             x: Math.random() * width,
             y: Math.random() * height,
@@ -84,8 +88,3 @@ function animateSnow() {
     requestAnimationFrame(animateSnow);
 }
 animateSnow();
-
-window.addEventListener('resize', () => {
-    resizeCanvas();
-    createFlakes();
-});
