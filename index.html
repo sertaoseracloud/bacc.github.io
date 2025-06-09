@@ -1,52 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>BACC - Brazil Angola Cloud Connection </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<html lang="pt-br">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BACC - Brazil Angola Cloud Connection | Winter Edition 2025</title>
+	<meta name="description" content="BACC - Brazil Angola Cloud Connection: Conectando países lusófonos através da tecnologia da informação. Palestras, painéis e workshops online para Brasil, Angola e países de língua portuguesa.">
+	<meta name="keywords" content="BACC, Brazil Angola Cloud Connection, tecnologia, programação, eventos, palestras, workshops, Brasil, Angola, países lusófonos, TI, Winter Edition 2025">
+	<meta name="author" content="BACC - Brazil Angola Cloud Connection">
+	<meta property="og:title" content="BACC - Brazil Angola Cloud Connection | Winter Edition 2025">
+	<meta property="og:description" content="Evento online conectando Brasil, Angola e países lusófonos através da tecnologia da informação.">
+	<meta property="og:image" content="https://bacc.github.io/images/logo.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://bacc.github.io/">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="BACC - Brazil Angola Cloud Connection | Winter Edition 2025">
+	<meta name="twitter:description" content="Evento online conectando Brasil, Angola e países lusófonos através da tecnologia da informação.">
+	<meta name="twitter:image" content="https://bacc.github.io/images/logo.png">
+	<link rel="canonical" href="https://bacc.github.io/">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	
+	<style>
+		:root {
+			--primary-color: #010e40;
+			--secondary-color: #fff;
+			--font-primary: #fff;
+			--font-secondary: #010e40;
+		}
+		body {
+			background: var(--secondary-color);
+			color: var(--font-secondary);
+		}
+		.bg-primary-custom {
+			background-color: var(--primary-color) !important;
+		}
+		.text-primary-custom {
+			color: var(--primary-color) !important;
+		}
+		.text-secondary-custom {
+			color: var(--secondary-color) !important;
+		}
+		.btn-primary-custom {
+			background-color: var(--primary-color);
+			color: var(--secondary-color);
+			border: none;
+			transition: transform 0.2s, box-shadow 0.2s;
+		}
+		.btn-primary-custom:hover {
+			background-color: #02186f;
+			color: var(--secondary-color);
+			transform: translateY(-3px) scale(1.04);
+			box-shadow: 0 6px 24px 0 rgba(1,14,64,0.18);
+		}
+		.navbar {
+			background: var(--primary-color);
+			transition: background 0.4s;
+		}
+		.navbar-nav .nav-link {
+			color: var(--font-primary) !important;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+		.navbar-nav .nav-link.active,
+		.navbar-nav .nav-link:focus,
+		.navbar-nav .nav-link:hover {
+			color: #FFD700 !important;
+			text-shadow: 0 2px 8px rgba(255,215,0,0.2);
+		}
+		.section-title {
+			color: var(--primary-color);
+			font-weight: 700;
+			animation: fadeInDown 1s;
+		}
+		.hero {
+			background: var(--primary-color) url('images/image_3.jpg') center center/cover no-repeat;
+			color: var(--font-primary);
+			padding: 60px 0 40px 0;
+			text-align: center;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			animation: fadeIn 1.2s;
+		}
+		.hero::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: var(--primary-color);
+			opacity: 0.7;
+			z-index: 0;
+		}
+		.hero > * {
+			position: relative;
+			z-index: 1;
+			animation: fadeInUp 1.2s;
+		}
+		.hero h1 {
+			font-size: 3.5rem;
+			margin-bottom: 0.5rem;
+			animation: fadeInDown 1.2s;
+		}
+		.hero h2 {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+			animation: fadeInDown 1.5s;
+		}
+		.hero p {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+			animation: fadeInUp 1.7s;
+		}
+		.card-speaker {
+			background: var(--secondary-color);
+			color: var(--primary-color);
+			border: 2px solid #eaeaea;
+			margin-bottom: 1rem;
+			padding: 1.5rem 1rem;
+			min-height: 110px;
+			transition: transform 0.25s, box-shadow 0.25s;
+			animation: fadeInUp 1s;
+		}
+		.card-speaker:hover {
+			transform: translateY(-8px) scale(1.04);
+			box-shadow: 0 8px 32px 0 rgba(1,14,64,0.12);
+		}
+		.card, .workshop-card {
+			animation: fadeInUp 1s;
+		}
+		.schedule-date {
+			font-weight: 600;
+			color: var(--primary-color);
+			margin-top: 1.5rem;
+			animation: fadeInDown 1s;
+		}
+		.workshop-card {
+			background: #f6fafd;
+			border-left: 5px solid var(--primary-color);
+			border-radius: 8px;
+			padding: 1.5rem;
+			margin-bottom: 1rem;
+			animation: fadeInUp 1s;
+		}
+		.sold-out {
+			color: #fff;
+			background: #f20d3b;
+			padding: 0.3rem 0.7rem;
+			border-radius: 8px;
+			font-weight: 700;
+			margin-left: 1rem;
+			font-size: 1rem;
+			animation: pulse 1.5s infinite;
+		}
+		.footer {
+			background: var(--primary-color);
+			color: var(--font-primary);
+			padding: 2rem 0 1rem 0;
+			margin-top: 3rem;
+			animation: fadeIn 1.2s;
+		}
+		@media (max-width: 575.98px) {
+			.hero h1 {
+				font-size: 2rem;
+			}
+			.hero h2 {
+				font-size: 1.1rem;
+			}
+		}
+		html, body {
+			font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+		}
 
-    <link rel="stylesheet" href="css/aos.css">
+		/* Animations */
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(40px);}
+			to { opacity: 1; transform: translateY(0);}
+		}
+		@keyframes fadeInDown {
+			from { opacity: 0; transform: translateY(-40px);}
+			to { opacity: 1; transform: translateY(0);}
+		}
+		@keyframes pulse {
+			0% { box-shadow: 0 0 0 0 #f20d3b66; }
+			70% { box-shadow: 0 0 0 10px #f20d3b00; }
+			100% { box-shadow: 0 0 0 0 #f20d3b00; }
+		}
+		/* Animate on scroll */
+		[data-animate] {
+			opacity: 0;
+			transform: translateY(40px);
+			transition: opacity 0.7s, transform 0.7s;
+		}
+		[data-animate].animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	</style>
+	<script>
+		// Animate on scroll
+		document.addEventListener('DOMContentLoaded', function () {
+			const animatedEls = document.querySelectorAll('[data-animate]');
+			const animateOnScroll = () => {
+				const triggerBottom = window.innerHeight * 0.92;
+				animatedEls.forEach(el => {
+					const boxTop = el.getBoundingClientRect().top;
+					if (boxTop < triggerBottom) {
+						el.classList.add('animated');
+					}
+				});
+			};
+			window.addEventListener('scroll', animateOnScroll);
+			animateOnScroll();
+		});
+	</script>
+</head>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<body>
+	<!-- Navbar -->
+	<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-primary-custom fixed-top transition-navbar" aria-label="Menu principal">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="/" title="Página inicial BACC">
+				<img src="images/logo.png" alt="Logo BACC" style="height: 50px; width: auto;">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+					<li class="nav-item"><a class="nav-link" href="#fotos">Fotos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
+					<li class="nav-item"><a class="nav-link" href="#workshops">Workshops</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+	<!-- Hero Section -->
+	<section class="hero overflow-hidden align-items-center justify-content-center" id="inicio" style="position:relative; min-height: 50vh;">
+		<div class="container text-center" style="z-index:2;">
+			<h1 class="mb-2">Winter Edition</h1>
+			<h2 class="mb-4">Conectando países lusófonos através da tecnologia da informação</h2>
+			<p class="mb-2">11, 12 e 13 de maio de 2025</p>
+			<p class="mb-3">On-line para Brasil e Angola</p>
+		</div>
+		<canvas id="snow-canvas" style="position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:1;"></canvas>
+	</section>
+	<script src="js/snow.js"></script>
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    
+	<!-- Sobre -->
+	<section class="py-5" id="sobre">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-7">
+					<h2 class="section-title">Winter Edition</h2>
+					<p>Conectando países lusófonos através da tecnologia da informação. O BACC - Brazil Angola Cloud Connection chega à sua terceira edição promovendo palestras, painéis e workshops sobre programação, linguagens, frameworks e tendências em tecnologia, reunindo a comunidade de desenvolvimento do Brasil, Angola e demais países de língua portuguesa.</p>
+				</div>
+				<div class="col-lg-5 d-none d-lg-block">
+					<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80"
+						class="img-fluid rounded shadow" alt="Evento devTEC">
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Organização -->
+	<section class="py-5 bg-primary-custom text-secondary-custom" id="organizacao">
+		<div class="container">
+			<h2 class="section-title text-secondary-custom mb-3">Organização</h2>
+			<p class="mb-4">
+				Equipe dedicada à realização do BACC, promovendo integração e inovação entre Brasil, Angola e países lusófonos. Conheça nossos organizadores e parceiros que tornam este evento possível.
+			</p>
+			<div class="row justify-content-center g-4">
+				<div class="col-md-4">
+					<article class="card shadow-lg h-100 flex-row align-items-stretch" style="background: #fff; color: #010e40; min-height: 180px;">
+						<div style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
+							<img src="images/org_1.png" class="card-img-left" alt="Cláudio Raposo" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+						</div>
+						<div class="card-body d-flex flex-column justify-content-center">
+							<h3 class="card-title fw-bold mb-1 h5">Cláudio Raposo <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg" alt="Bandeira do Brasil" title="Brasil"
+								style="width:28px;"></h3>
+							<p class="card-text small mb-0">
+								Arquiteto de Sistemas na NTT DATA Europe & Latam, professor universitário, Microsoft MVP, Docker Captain, Green Software Champion e D.BA na ACLAS (EUA). Atua conectando tecnologia e educação, com ênfase em estruturas de dados e pensamento algorítmico.
+							</p>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-4">
+					<article class="card shadow-lg h-100 flex-row align-items-stretch" style="background: #fff; color: #010e40; min-height: 180px;">
+						<div style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
+							<img src="images/org_2.jpg" class="card-img-left" alt="José Quintino" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+						</div>
+						<div class="card-body d-flex flex-column justify-content-center">
+							<h3 class="card-title fw-bold mb-1 h5">José Quintino <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/ao.svg" alt="Bandeira de Angola" title="Angola"
+								style="width:28px;"></h3>
+							<p class="card-text small mb-0">
+								Especialista em Azure e Microsoft 365, administrador do blog shareti.ao, Microsoft Certified Trainer (MCT) e líder de comunidades técnicas em Angola. Focado em compartilhar conhecimento e capacitar novos profissionais de tecnologia.
+							</p>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-4">
+					<article class="card shadow-lg h-100 flex-row align-items-stretch" style="background: #fff; color: #010e40; min-height: 180px;">
+						<div style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
+							<img src="images/org_3.jpg" class="card-img-left" alt="Marcelo Pacífico" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+						</div>
+						<div class="card-body d-flex flex-column justify-content-center">
+							<h3 class="card-title fw-bold mb-1 h5">Marcelo Pacífico <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg" alt="Bandeira do Brasil" title="Brasil"
+								style="width:28px;"></h3>
+							<p class="card-text small mb-0">
+								Instrutor, consultor e palestrante em Microsoft 365, Copilot, IA e Power Platform/Fabric. Microsoft MVP, MCT Community Lead e especialista em transformação digital, com atuação em grandes empresas e comunidades técnicas.
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+	<!-- Convidados -->
+	<section class="py-5 bg-light" id="convidados">
+		<div class="container">
+			<h2 class="section-title mb-4">Convidados</h2>
+			<div class="row">
+				<!-- Exemplo de card de palestrante com foto e bandeira -->
+				<div class="col-md-3 col-6 mb-4">
+					<article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
+						<div style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+							<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de João Silva, Desenvolvedor Full Stack do Brasil" style="width:100%; height:220px; object-fit:cover;">
+						</div>
+						<div class="card-body text-center d-flex flex-column align-items-center">
+							<b class="mb-1">JOÃO SILVA</b>
+							<div class="small mb-2">Desenvolvedor Full Stack</div>
+							<img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg" alt="Bandeira do Brasil" title="Brasil" style="width:28px;">
+						</div>
+					</article>
+				</div>
+				<div class="col-md-3 col-6 mb-4">
+					<article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
+						<div style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+							<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Foto de Carlos Mendes, Especialista em Cloud de Angola" style="width:100%; height:220px; object-fit:cover;">
+						</div>
+						<div class="card-body text-center d-flex flex-column align-items-center">
+							<b class="mb-1">CARLOS MENDES</b>
+							<div class="small mb-2">Especialista em Cloud</div>
+							<img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/ao.svg" alt="Bandeira de Angola" title="Angola" style="width:28px;">
+						</div>
+					</article>
+				</div>
+				<div class="col-md-3 col-6 mb-4">
+					<article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
+						<div style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+							<img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Foto de António Sousa, Engenheiro de Software de Portugal" style="width:100%; height:220px; object-fit:cover;">
+						</div>
+						<div class="card-body text-center d-flex flex-column align-items-center">
+							<b class="mb-1">ANTÓNIO SOUSA</b>
+							<div class="small mb-2">Engenheiro de Software</div>
+							<img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg" alt="Bandeira de Portugal" title="Portugal" style="width:28px;">
+						</div>
+					</article>
+				</div>
+				<div class="col-md-3 col-6 mb-4">
+					<article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
+						<div style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+							<img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Foto de Miguel Machava, Analista de Dados de Moçambique" style="width:100%; height:220px; object-fit:cover;">
+						</div>
+						<div class="card-body text-center d-flex flex-column align-items-center">
+							<b class="mb-1">MIGUEL MACHAVA</b>
+							<div class="small mb-2">Analista de Dados</div>
+							<img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/mz.svg" alt="Bandeira de Moçambique" title="Moçambique" style="width:28px;">
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Programação -->
+	<section class="py-5" id="talks">
+		<div class="container">
+			<h2 class="section-title mb-4">Programação</h2>
+			<ul class="nav nav-tabs mb-3" id="programacaoTabs" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="dia1-tab" data-bs-toggle="tab" data-bs-target="#dia1" type="button" role="tab" aria-controls="dia1" aria-selected="true">
+						20/05 - TERÇA-FEIRA
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="dia2-tab" data-bs-toggle="tab" data-bs-target="#dia2" type="button" role="tab" aria-controls="dia2" aria-selected="false">
+						21/05 - QUARTA-FEIRA
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="dia3-tab" data-bs-toggle="tab" data-bs-target="#dia3" type="button" role="tab" aria-controls="dia3" aria-selected="false">
+						22/05 - QUINTA-FEIRA
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="programacaoTabsContent">
+				<div class="tab-pane fade show active" id="dia1" role="tabpanel" aria-labelledby="dia1-tab">
+					<div class="schedule-date">20/05 - TERÇA-FEIRA (noturno)</div>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Mantenha a sanidade durante a revolução da Inteligência Artificial</h3>
+									<p class="card-text mb-2"><b>Palestrante:</b> Fabio Vedovelli</p>
+									<p class="card-text mb-2"><b>Horário:</b> 19h00</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO1" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Descentralização na Prática: O Que é Web 3.0 e Por Que Você Deveria se Importar?</h3>
+									<p class="card-text mb-2"><b>Palestrante:</b> Jeanluca Fernandes</p>
+									<p class="card-text mb-2"><b>Horário:</b> 20h00</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO2" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">WebAR na Prática: Desenvolvendo Experiências Imersivas para a Web</h3>
+									<p class="card-text mb-2"><b>Palestrante:</b> Paulo Candido</p>
+									<p class="card-text mb-2"><b>Horário:</b> 21h00</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO3" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
+					<div class="schedule-date">21/05 - QUARTA-FEIRA</div>
+					<div class="row g-3">
+						<div class="col-md-6">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Workshop: Web 3.0 - Sua primeira aplicação descentralizada na Blockchain</h3>
+									<p class="card-text mb-2"><b>Palestrante:</b> Jeanluca Fernandes (Dasa)</p>
+									<p class="card-text mb-2"><b>Horário:</b> 19h00</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO4" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Painel: O Futuro da Programação em Países Lusófonos</h3>
+									<p class="card-text mb-2"><b>Painelistas:</b> Diversos</p>
+									<p class="card-text mb-2"><b>Horário:</b> 20h30</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO5" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="dia3" role="tabpanel" aria-labelledby="dia3-tab">
+					<div class="schedule-date">22/05 - QUINTA-FEIRA</div>
+					<div class="row g-3">
+						<div class="col-md-6">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Encerramento e Networking</h3>
+									<p class="card-text mb-2"><b>Horário:</b> 18h30</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO6" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6">
+							<article class="card h-100">
+								<div class="card-body">
+									<h3 class="card-title h5">Mesa Redonda: Tendências em Tecnologia e Inovação</h3>
+									<p class="card-text mb-2"><b>Painelistas:</b> Diversos</p>
+									<p class="card-text mb-2"><b>Horário:</b> 19h30</p>
+									<a href="https://www.youtube.com/watch?v=EXEMPLO7" class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no YouTube</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer text-center">
+		<div class="container">
+			<p class="mb-1"><strong>BACC - Brazil Angola Cloud Connection • Winter Edition</strong></p>
+			<div>11, 12 e 13 de maio de 2025 • On-line para Brasil e Angola</div>
+			<div class="mt-3 small">&copy; 2025 BACC</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
