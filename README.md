@@ -18,3 +18,10 @@ Todo o conteúdo está dentro da pasta `assets` para facilitar a separação ent
 ## Licença
 
 Os arquivos deste repositório estão sob licença MIT, salvo indicação em contrário nos próprios arquivos.
+
+## Segurança
+
+Para mitigar riscos de ataques via dependências externas:
+
+- Todos os recursos carregados de CDNs possuem **Subresource Integrity (SRI)** e o atributo `crossorigin="anonymous"`.
+- Links que abrem em nova aba utilizam `rel="noopener noreferrer"`.
