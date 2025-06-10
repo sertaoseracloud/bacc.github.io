@@ -13,277 +13,20 @@
     <meta property="og:title" content="BACC - Brazil Angola Cloud Connection | Winter Edition 2025">
     <meta property="og:description"
         content="Evento online conectando Brasil, Angola e países lusófonos através da tecnologia da informação.">
-    <meta property="og:image" content="https://bacc.github.io/images/logo.png">
+    <meta property="og:image" content="https://bacc.github.../assets/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bacc.github.io/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BACC - Brazil Angola Cloud Connection | Winter Edition 2025">
     <meta name="twitter:description"
         content="Evento online conectando Brasil, Angola e países lusófonos através da tecnologia da informação.">
-    <meta name="twitter:image" content="https://bacc.github.io/images/logo.png">
+    <meta name="twitter:image" content="https://bacc.github.../assets/images/logo.png">
     <link rel="canonical" href="https://bacc.github.io/">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 
-    <style>
-        :root {
-            --primary-color: #010e40;
-            --secondary-color: #fff;
-            --font-primary: #fff;
-            --font-secondary: #010e40;
-        }
-
-        body {
-            background: var(--secondary-color);
-            color: var(--font-secondary);
-        }
-
-        .bg-primary-custom {
-            background-color: var(--primary-color) !important;
-        }
-
-        .text-primary-custom {
-            color: var(--primary-color) !important;
-        }
-
-        .text-secondary-custom {
-            color: var(--secondary-color) !important;
-        }
-
-        .btn-primary-custom {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            border: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-primary-custom:hover {
-            background-color: #02186f;
-            color: var(--secondary-color);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 6px 24px 0 rgba(1, 14, 64, 0.18);
-        }
-
-        .navbar {
-            background: var(--primary-color);
-            transition: background 0.4s;
-        }
-
-        .navbar-nav .nav-link {
-            color: var(--font-primary) !important;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .navbar-nav .nav-link.active,
-        .navbar-nav .nav-link:focus,
-        .navbar-nav .nav-link:hover {
-            color: #FFD700 !important;
-            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
-        }
-
-        .section-title {
-            color: var(--primary-color);
-            font-weight: 700;
-            animation: fadeInDown 1s;
-        }
-
-        .hero {
-            background: var(--primary-color) url('../images/image_3.jpg') center center/cover no-repeat;
-            color: var(--font-primary);
-            padding: 60px 0 40px 0;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            animation: fadeIn 1.2s;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: var(--primary-color);
-            opacity: 0.7;
-            z-index: 0;
-        }
-
-        .hero>* {
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1.2s;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            animation: fadeInDown 1.2s;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1.5s;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            animation: fadeInUp 1.7s;
-        }
-
-        .card-speaker {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-            border: 2px solid #eaeaea;
-            margin-bottom: 1rem;
-            padding: 1.5rem 1rem;
-            min-height: 110px;
-            transition: transform 0.25s, box-shadow 0.25s;
-            animation: fadeInUp 1s;
-        }
-
-        .card-speaker:hover {
-            transform: translateY(-8px) scale(1.04);
-            box-shadow: 0 8px 32px 0 rgba(1, 14, 64, 0.12);
-        }
-
-        .card,
-        .workshop-card {
-            animation: fadeInUp 1s;
-        }
-
-        .schedule-date {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-top: 1.5rem;
-            animation: fadeInDown 1s;
-        }
-
-        .workshop-card {
-            background: #f6fafd;
-            border-left: 5px solid var(--primary-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s;
-        }
-
-        .sold-out {
-            color: #fff;
-            background: #f20d3b;
-            padding: 0.3rem 0.7rem;
-            border-radius: 8px;
-            font-weight: 700;
-            margin-left: 1rem;
-            font-size: 1rem;
-            animation: pulse 1.5s infinite;
-        }
-
-        .footer {
-            background: var(--primary-color);
-            color: var(--font-primary);
-            padding: 2rem 0 1rem 0;
-            margin-top: 3rem;
-            animation: fadeIn 1.2s;
-        }
-
-        @media (max-width: 575.98px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero h2 {
-                font-size: 1.1rem;
-            }
-        }
-
-        html,
-        body {
-            font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 #f20d3b66;
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px #f20d3b00;
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 #f20d3b00;
-            }
-        }
-
-        /* Animate on scroll */
-        [data-animate] {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.7s, transform 0.7s;
-        }
-
-        [data-animate].animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-    <script>
-        // Animate on scroll
-        document.addEventListener('DOMContentLoaded', function () {
-            const animatedEls = document.querySelectorAll('[data-animate]');
-            const animateOnScroll = () => {
-                const triggerBottom = window.innerHeight * 0.92;
-                animatedEls.forEach(el => {
-                    const boxTop = el.getBoundingClientRect().top;
-                    if (boxTop < triggerBottom) {
-                        el.classList.add('animated');
-                    }
-                });
-            };
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll();
-        });
-    </script>
 </head>
 
 <body>
@@ -292,7 +35,7 @@
         aria-label="Menu principal">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/" title="Página inicial BACC">
-                <img src="../images/logo.png" alt="Logo BACC" style="height: 50px; width: auto;">
+                <img src="../assets/images/logo.png" alt="Logo BACC" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
@@ -320,18 +63,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero overflow-hidden align-items-center justify-content-center" id="inicio"
-        style="position:relative; min-height: 50vh;">
-        <div class="container text-center" style="z-index:2;">
+    <section class="hero overflow-hidden hero-section align-items-center justify-content-center" id="inicio">
+        <div class="container text-center hero-container">
             <h1 class="mb-2">Fall Edition</h1>
             <h2 class="mb-4">Conectando países lusófonos através da tecnologia da informação</h2>
             <p class="mb-2">23 e 24 de Maio de 2025</p>
             <p class="mb-3">On-line para Brasil e Angola</p>
         </div>
-        <canvas id="fall-canvas"
-            style="position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:1;"></canvas>
+        <canvas id="fall-canvas" class="canvas-overlay"></canvas>
     </section>
-    <script src="../js/leaffall.js"></script>
+    <script src="../assets/js/leaffall.js"></script>
 
     <!-- Sobre -->
     <!-- Sobre o Evento - Cards com imagem lateral -->
@@ -341,15 +82,15 @@
             <div class="row g-4">
                 <div class="col-12 col-md-6">
                     <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
-                        style="min-height: 200px;">
-                        <div
-                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
-                            <img src="../images/friends.png" class="img-fluid h-100" alt="Evento devTEC"
-                                style="object-fit:cover; width:100%; height:100%;">
+                        class="min-h-200">
+                        <div class="card-img-wrapper">
+                            <img src="../assets/images/friends.png" class="img-fluid h-100" alt="Evento devTEC"
+                                class="img-cover">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title h5">Brazil Angola Cloud Connection</h3>
-                            <p class="card-text small">Conectando países lusófonos através da tecnologia da informação. O
+                            <p class="card-text small">Conectando países lusófonos através da tecnologia da informação.
+                                O
                                 BACC chega à sua terceira edição promovendo palestras, painéis e workshops sobre
                                 programação, linguagens, frameworks e tendências em tecnologia, reunindo a comunidade de
                                 desenvolvimento do Brasil, Angola e demais países de língua portuguesa.</p>
@@ -358,51 +99,54 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
-                        style="min-height: 200px;">
-                        <div
-                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
-                            <img src="../images/friends_2.png" class="img-fluid h-100" alt="Quem Somos BACC"
-                                style="object-fit:cover; width:100%; height:100%;">
+                        class="min-h-200">
+                        <div class="card-img-wrapper">
+                            <img src="../assets/images/friends_2.png" class="img-fluid h-100" alt="Quem Somos BACC"
+                                class="img-cover">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title h5">Quem Somos?</h3>
                             <p class="card-text small">Somos uma comunidade formada por profissionais, estudantes e
                                 entusiastas de tecnologia do Brasil, Angola e demais países de língua portuguesa. Nosso
-                                objetivo é promover a integração, o compartilhamento de conhecimento e a inovação por meio
-                                de eventos, palestras e workshops online, conectando pessoas e oportunidades no universo da
+                                objetivo é promover a integração, o compartilhamento de conhecimento e a inovação por
+                                meio
+                                de eventos, palestras e workshops online, conectando pessoas e oportunidades no universo
+                                da
                                 tecnologia.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
-                        style="min-height: 200px;">
-                        <div
-                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
-                            <img src="../images/friends_3.png" class="img-fluid h-100" alt="Networking BACC"
-                                style="object-fit:cover; width:100%; height:100%;">
+                        class="min-h-200">
+                        <div class="card-img-wrapper">
+                            <img src="../assets/images/friends_3.png" class="img-fluid h-100" alt="Networking BACC"
+                                class="img-cover">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title h5">O que fazemos?</h3>
-                            <p class="card-text small">Promovemos eventos online, palestras, painéis e workshops gratuitos
-                                para integrar, capacitar e conectar profissionais, estudantes e entusiastas de tecnologia
-                                dos países lusófonos, fortalecendo a comunidade e ampliando oportunidades no setor de TI.
+                            <p class="card-text small">Promovemos eventos online, palestras, painéis e workshops
+                                gratuitos
+                                para integrar, capacitar e conectar profissionais, estudantes e entusiastas de
+                                tecnologia
+                                dos países lusófonos, fortalecendo a comunidade e ampliando oportunidades no setor de
+                                TI.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
-                        style="min-height: 200px;">
-                        <div
-                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
-                            <img src="../images/friends_4.png" class="img-fluid h-100" alt="Onde queremos chegar BACC"
-                                style="object-fit:cover; width:100%; height:100%;">
+                        class="min-h-200">
+                        <div class="card-img-wrapper">
+                            <img src="../assets/images/friends_4.png" class="img-fluid h-100"
+                                alt="Onde queremos chegar BACC" class="img-cover">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title h5">Onde queremos chegar?</h3>
                             <p class="card-text small">Buscamos ser referência na integração tecnológica entre países
-                                lusófonos, promovendo oportunidades, inovação e colaboração internacional. Nosso objetivo é
+                                lusófonos, promovendo oportunidades, inovação e colaboração internacional. Nosso
+                                objetivo é
                                 criar uma rede sólida de profissionais e entusiastas de tecnologia, ampliando o impacto
                                 positivo da TI em toda a comunidade de língua portuguesa.</p>
                         </div>
@@ -416,7 +160,7 @@
             #sobre .card.flex-row {
                 flex-direction: column !important;
             }
-    
+
             #sobre .card.flex-row>div:first-child {
                 border-radius: 0.5rem 0.5rem 0 0 !important;
                 width: 100% !important;
@@ -436,17 +180,15 @@
             </p>
             <div class="row justify-content-center g-4">
                 <div class="col-md-4">
-                    <article class="card shadow-lg h-100 flex-row align-items-stretch"
-                        style="background: #fff; color: #010e40; min-height: 180px;">
-                        <div
-                            style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
-                            <img src="../images/org_fall1.png" class="card-img-left" alt="Cláudio Raposo"
-                                style="width:100%; height:100%; object-fit:cover; object-position:top;">
+                    <article class="card shadow-lg h-100 flex-row align-items-stretch" class="speaker-card-bg">
+                        <div class="speaker-img-container">
+                            <img src="../assets/images/org_fall1.png" class="card-img-left" alt="Cláudio Raposo"
+                                class="img-cover-top">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title fw-bold mb-1 h5">Cláudio Raposo <img
                                     src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg"
-                                    alt="Bandeira do Brasil" title="Brasil" style="width:28px;"></h3>
+                                    alt="Bandeira do Brasil" title="Brasil" class="flag-icon"></h3>
                             <p class="card-text small mb-0">
                                 Arquiteto de Sistemas na NTT DATA Europe & Latam, professor universitário, Microsoft
                                 MVP, Docker Captain, Green Software Champion e D.BA na ACLAS (EUA). Atua conectando
@@ -456,17 +198,15 @@
                     </article>
                 </div>
                 <div class="col-md-4">
-                    <article class="card shadow-lg h-100 flex-row align-items-stretch"
-                        style="background: #fff; color: #010e40; min-height: 180px;">
-                        <div
-                            style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
-                            <img src="../images/org_fall2.png" class="card-img-left" alt="José Quintino"
-                                style="width:100%; height:100%; object-fit:cover; object-position:top;">
+                    <article class="card shadow-lg h-100 flex-row align-items-stretch" class="speaker-card-bg">
+                        <div class="speaker-img-container">
+                            <img src="../assets/images/org_fall2.png" class="card-img-left" alt="José Quintino"
+                                class="img-cover-top">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title fw-bold mb-1 h5">José Quintino <img
                                     src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/ao.svg"
-                                    alt="Bandeira de Angola" title="Angola" style="width:28px;"></h3>
+                                    alt="Bandeira de Angola" title="Angola" class="flag-icon"></h3>
                             <p class="card-text small mb-0">
                                 Especialista em Azure e Microsoft 365, administrador do blog shareti.ao, Microsoft
                                 Certified Trainer (MCT) e líder de comunidades técnicas em Angola. Focado em
@@ -476,17 +216,15 @@
                     </article>
                 </div>
                 <div class="col-md-4">
-                    <article class="card shadow-lg h-100 flex-row align-items-stretch"
-                        style="background: #fff; color: #010e40; min-height: 180px;">
-                        <div
-                            style="width:140px; height:100%; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0; display:flex; align-items:stretch;">
-                            <img src="../images/org_fall3.png" class="card-img-left" alt="Marcelo Pacífico"
-                                style="width:100%; height:100%; object-fit:cover; object-position:top;">
+                    <article class="card shadow-lg h-100 flex-row align-items-stretch" class="speaker-card-bg">
+                        <div class="speaker-img-container">
+                            <img src="../assets/images/org_fall3.png" class="card-img-left" alt="Marcelo Pacífico"
+                                class="img-cover-top">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title fw-bold mb-1 h5">Marcelo Pacífico <img
                                     src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg"
-                                    alt="Bandeira do Brasil" title="Brasil" style="width:28px;"></h3>
+                                    alt="Bandeira do Brasil" title="Brasil" class="flag-icon"></h3>
                             <p class="card-text small mb-0">
                                 Instrutor, consultor e palestrante em Microsoft 365, Copilot, IA e Power
                                 Platform/Fabric. Microsoft MVP, MCT Community Lead e especialista em transformação
@@ -506,66 +244,58 @@
             <div class="row">
                 <!-- Exemplo de card de palestrante com foto e bandeira -->
                 <div class="col-md-3 col-6 mb-4">
-                    <article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
-                        <div
-                            style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+                    <article class="card card-speaker h-100 shadow-sm border-0" class="bg-white">
+                        <div class="speaker-img-wrapper">
                             <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                alt="Foto de João Silva, Desenvolvedor Full Stack do Brasil"
-                                style="width:100%; height:220px; object-fit:cover;">
+                                alt="Foto de João Silva, Desenvolvedor Full Stack do Brasil" class="img-cover-h220">
                         </div>
                         <div class="card-body text-center d-flex flex-column align-items-center">
                             <b class="mb-1">JOÃO SILVA</b>
                             <div class="small mb-2">Desenvolvedor Full Stack</div>
                             <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/br.svg"
-                                alt="Bandeira do Brasil" title="Brasil" style="width:28px;">
+                                alt="Bandeira do Brasil" title="Brasil" class="flag-icon">
                         </div>
                     </article>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
-                    <article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
-                        <div
-                            style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+                    <article class="card card-speaker h-100 shadow-sm border-0" class="bg-white">
+                        <div class="speaker-img-wrapper">
                             <img src="https://randomuser.me/api/portraits/men/45.jpg"
-                                alt="Foto de Carlos Mendes, Especialista em Cloud de Angola"
-                                style="width:100%; height:220px; object-fit:cover;">
+                                alt="Foto de Carlos Mendes, Especialista em Cloud de Angola" class="img-cover-h220">
                         </div>
                         <div class="card-body text-center d-flex flex-column align-items-center">
                             <b class="mb-1">CARLOS MENDES</b>
                             <div class="small mb-2">Especialista em Cloud</div>
                             <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/ao.svg"
-                                alt="Bandeira de Angola" title="Angola" style="width:28px;">
+                                alt="Bandeira de Angola" title="Angola" class="flag-icon">
                         </div>
                     </article>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
-                    <article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
-                        <div
-                            style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+                    <article class="card card-speaker h-100 shadow-sm border-0" class="bg-white">
+                        <div class="speaker-img-wrapper">
                             <img src="https://randomuser.me/api/portraits/men/54.jpg"
-                                alt="Foto de António Sousa, Engenheiro de Software de Portugal"
-                                style="width:100%; height:220px; object-fit:cover;">
+                                alt="Foto de António Sousa, Engenheiro de Software de Portugal" class="img-cover-h220">
                         </div>
                         <div class="card-body text-center d-flex flex-column align-items-center">
                             <b class="mb-1">ANTÓNIO SOUSA</b>
                             <div class="small mb-2">Engenheiro de Software</div>
                             <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg"
-                                alt="Bandeira de Portugal" title="Portugal" style="width:28px;">
+                                alt="Bandeira de Portugal" title="Portugal" class="flag-icon">
                         </div>
                     </article>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
-                    <article class="card card-speaker h-100 shadow-sm border-0" style="background:#fff;">
-                        <div
-                            style="height:220px; overflow:hidden; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;">
+                    <article class="card card-speaker h-100 shadow-sm border-0" class="bg-white">
+                        <div class="speaker-img-wrapper">
                             <img src="https://randomuser.me/api/portraits/men/67.jpg"
-                                alt="Foto de Miguel Machava, Analista de Dados de Moçambique"
-                                style="width:100%; height:220px; object-fit:cover;">
+                                alt="Foto de Miguel Machava, Analista de Dados de Moçambique" class="img-cover-h220">
                         </div>
                         <div class="card-body text-center d-flex flex-column align-items-center">
                             <b class="mb-1">MIGUEL MACHAVA</b>
                             <div class="small mb-2">Analista de Dados</div>
                             <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/mz.svg"
-                                alt="Bandeira de Moçambique" title="Moçambique" style="width:28px;">
+                                alt="Bandeira de Moçambique" title="Moçambique" class="flag-icon">
                         </div>
                     </article>
                 </div>
@@ -596,7 +326,7 @@
                     <div class="row g-3">
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Power Automate Custom Connector</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Ricardo Cabral</p>
@@ -604,7 +334,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -612,7 +343,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Garantindo a Continuidade dos Negócios com Backup e
                                             Recuperação de Desastres no Azure</h3>
@@ -621,7 +352,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -629,7 +361,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Security Assessment</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Marcus Vinicius</p>
@@ -637,7 +369,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -645,7 +378,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">MS Intune - Abordagem do Ecosistema</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Cremildo Manhique</p>
@@ -653,7 +386,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -661,7 +395,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Os Desafios por trás da Migração para Cloud com Azure
                                             VMware Solution: um Case Microsoft Global</h3>
@@ -670,7 +404,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -678,7 +413,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Transformação Digital de Negócios Impulsionada por
                                             Engenharia de Inteligência Artificial</h3>
@@ -687,7 +422,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -695,7 +431,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Prevenção contra Perda de Dados com o Microsoft
                                             Purview</h3>
@@ -704,7 +440,8 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
@@ -712,7 +449,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
                                     <div>
                                         <h3 class="card-title h5">Dicas para otimizar o dia a dia desenvolvendo com
                                             Power Platform</h3>
@@ -721,136 +458,144 @@
                                     </div>
                                     <div class="mt-3 text-start">
                                         <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
-                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no
                                             YouTube</a>
                                     </div>
                                 </div>
                             </article>
                         </div>
-               
-                </div>
+
+                    </div>
 
 
-            </div>
-            <div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">Hacking Azure AI</h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> André Melancia</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 7h00 (Brasil) / 11h00 (Angola)</p>
+                </div>
+                <div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">Hacking Azure AI</h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> André Melancia</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 7h00 (Brasil) / 11h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">FinOps na Prática com Microsoft Fabric</h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> Shalom André</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 8h00 (Brasil) / 12h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">FinOps na Prática com Microsoft Fabric</h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> Shalom André</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 8h00 (Brasil) / 12h00 (Angola)</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">Descomplicando Máquinas Virtuais no Azure: Escolhas
+                                            Inteligentes e Custos Otimizados</h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> Edesan Tomaz</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 9h00 (Brasil) / 13h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">Backup de sua estrutura no Azure</h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> Jefferson Castilho</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 10h00 (Brasil) / 14h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">Descomplicando Máquinas Virtuais no Azure: Escolhas
-                                        Inteligentes e Custos Otimizados</h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> Edesan Tomaz</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 9h00 (Brasil) / 13h00 (Angola)</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">Round Table: Transformação Digital com Microsoft
+                                            Copilot
+                                        </h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> Cláudio Rapôso / José Quintino /
+                                            Marcelo Pacífico</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 11h00 (Brasil) / 15h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="card h-100">
+                                <div class="card-body d-flex flex-column justify-content-between" class="h-100">
+                                    <div>
+                                        <h3 class="card-title h5">Arquitetura em AI</h3>
+                                        <p class="card-text mb-2"><b>Palestrante:</b> Fabio Silva</p>
+                                        <p class="card-text mb-2"><b>Horário:</b> 13h00 (Brasil) / 17h00 (Angola)</p>
+                                    </div>
+                                    <div class="mt-3 text-start">
+                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY"
+                                            class="btn btn-primary-custom" target="_blank"
+                                            rel="noopener noreferrer">Assistir no YouTube</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">Backup de sua estrutura no Azure</h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> Jefferson Castilho</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 10h00 (Brasil) / 14h00 (Angola)</p>
-                                </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">Round Table: Transformação Digital com Microsoft Copilot
-                                    </h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> Cláudio Rapôso / José Quintino /
-                                        Marcelo Pacífico</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 11h00 (Brasil) / 15h00 (Angola)</p>
-                                </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                <div>
-                                    <h3 class="card-title h5">Arquitetura em AI</h3>
-                                    <p class="card-text mb-2"><b>Palestrante:</b> Fabio Silva</p>
-                                    <p class="card-text mb-2"><b>Horário:</b> 13h00 (Brasil) / 17h00 (Angola)</p>
-                                </div>
-                                <div class="mt-3 text-start">
-                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                        target="_blank" rel="noopener">Assistir no YouTube</a>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
     <!-- Efeito de cidade nevando acima do footer -->
 
-    <footer class="footer text-center" style="position:relative; z-index:4; padding-bottom:0;">
-        <div
-            style="position:relative; width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; height:220px; overflow:hidden; z-index:2; margin-top:0; padding-top:0;">
+    <footer class="footer text-center footer-relative">
+        <div class="footer-bg">
             <!-- Cidade em SVG ocupando toda a largura -->
-            <canvas id="fallcity-canvas"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;"></canvas>
+            <canvas id="fallcity-canvas" class="canvas-city"></canvas>
         </div>
-        <div class="container" style="position:relative; z-index:5;"></div>
+        <div class="container z-index-5"></div>
         <p class="mb-1"><strong>BACC - Brazil Angola Cloud Connection • Fall Edition</strong></p>
         <div>23 e 24 de Maio de 2025 • On-line para Brasil e Angola</div>
         <div class="mt-3 small">&copy; 2025 BACC</div>
         </div>
     </footer>
-    <script src="../js/fallcity.js"></script>
+    <script src="../assets/js/fallcity.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
