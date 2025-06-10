@@ -300,10 +300,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#organizacao">Organização</a></li>
                     <li class="nav-item"><a class="nav-link" href="#talks">Programação</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="edicoesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Edições Anteriores
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="edicoesDropdown">
+                            <li><a class="dropdown-item" href="./fall-2025.html">Fall Edition 2025</a></li>
+                            <!-- Adicione outras edições aqui -->
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -324,23 +334,97 @@
     <script src="../js/leaffall.js"></script>
 
     <!-- Sobre -->
-    <section class="py-5" id="sobre">
+    <!-- Sobre o Evento - Cards com imagem lateral -->
+    <section id="sobre" class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h2 class="section-title">Fall Edition</h2>
-                    <p>Conectando países lusófonos através da tecnologia da informação. O BACC - Brazil Angola Cloud
-                        Connection chega à sua terceira edição promovendo palestras, painéis e workshops sobre
-                        programação, linguagens, frameworks e tendências em tecnologia, reunindo a comunidade de
-                        desenvolvimento do Brasil, Angola e demais países de língua portuguesa.</p>
+            <h2 class="section-title text-center mb-4">Sobre o Evento</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
+                        style="min-height: 200px;">
+                        <div
+                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
+                            <img src="../images/friends.png" class="img-fluid h-100" alt="Evento devTEC"
+                                style="object-fit:cover; width:100%; height:100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title h5">Brazil Angola Cloud Connection</h3>
+                            <p class="card-text small">Conectando países lusófonos através da tecnologia da informação. O
+                                BACC chega à sua terceira edição promovendo palestras, painéis e workshops sobre
+                                programação, linguagens, frameworks e tendências em tecnologia, reunindo a comunidade de
+                                desenvolvimento do Brasil, Angola e demais países de língua portuguesa.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80"
-                        class="img-fluid rounded shadow" alt="Evento devTEC">
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
+                        style="min-height: 200px;">
+                        <div
+                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
+                            <img src="../images/friends_2.png" class="img-fluid h-100" alt="Quem Somos BACC"
+                                style="object-fit:cover; width:100%; height:100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title h5">Quem Somos?</h3>
+                            <p class="card-text small">Somos uma comunidade formada por profissionais, estudantes e
+                                entusiastas de tecnologia do Brasil, Angola e demais países de língua portuguesa. Nosso
+                                objetivo é promover a integração, o compartilhamento de conhecimento e a inovação por meio
+                                de eventos, palestras e workshops online, conectando pessoas e oportunidades no universo da
+                                tecnologia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
+                        style="min-height: 200px;">
+                        <div
+                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
+                            <img src="../images/friends_3.png" class="img-fluid h-100" alt="Networking BACC"
+                                style="object-fit:cover; width:100%; height:100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title h5">O que fazemos?</h3>
+                            <p class="card-text small">Promovemos eventos online, palestras, painéis e workshops gratuitos
+                                para integrar, capacitar e conectar profissionais, estudantes e entusiastas de tecnologia
+                                dos países lusófonos, fortalecendo a comunidade e ampliando oportunidades no setor de TI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 flex-row shadow-sm align-items-stretch bg-primary-custom text-secondary-custom border-0"
+                        style="min-height: 200px;">
+                        <div
+                            style="width:160px; min-height:200px; overflow:hidden; border-radius:0.5rem 0 0 0.5rem; flex-shrink:0;">
+                            <img src="../images/friends_4.png" class="img-fluid h-100" alt="Onde queremos chegar BACC"
+                                style="object-fit:cover; width:100%; height:100%;">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title h5">Onde queremos chegar?</h3>
+                            <p class="card-text small">Buscamos ser referência na integração tecnológica entre países
+                                lusófonos, promovendo oportunidades, inovação e colaboração internacional. Nosso objetivo é
+                                criar uma rede sólida de profissionais e entusiastas de tecnologia, ampliando o impacto
+                                positivo da TI em toda a comunidade de língua portuguesa.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <style>
+        @media (max-width: 767.98px) {
+            #sobre .card.flex-row {
+                flex-direction: column !important;
+            }
+    
+            #sobre .card.flex-row>div:first-child {
+                border-radius: 0.5rem 0.5rem 0 0 !important;
+                width: 100% !important;
+                height: 180px !important;
+            }
+        }
+    </style>
+
 
     <!-- Organização -->
     <section class="py-5 bg-primary-custom text-secondary-custom" id="organizacao">
@@ -519,8 +603,9 @@
                                         <p class="card-text mb-2"><b>Horário:</b> 6h00 (Brasil) / 10h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom"
-                                            target="_blank" rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -529,13 +614,15 @@
                             <article class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
                                     <div>
-                                        <h3 class="card-title h5">Garantindo a Continuidade dos Negócios com Backup e Recuperação de Desastres no Azure</h3>
+                                        <h3 class="card-title h5">Garantindo a Continuidade dos Negócios com Backup e
+                                            Recuperação de Desastres no Azure</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Domingos Massissa</p>
                                         <p class="card-text mb-2"><b>Horário:</b> 7h00 (Brasil) / 11h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -549,8 +636,9 @@
                                         <p class="card-text mb-2"><b>Horário:</b> 9h00 (Brasil) / 13h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -564,8 +652,9 @@
                                         <p class="card-text mb-2"><b>Horário:</b> 11h00 (Brasil) / 15h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -574,13 +663,15 @@
                             <article class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
                                     <div>
-                                        <h3 class="card-title h5">Os Desafios por trás da Migração para Cloud com Azure VMware Solution: um Case Microsoft Global</h3>
+                                        <h3 class="card-title h5">Os Desafios por trás da Migração para Cloud com Azure
+                                            VMware Solution: um Case Microsoft Global</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Luckas Fernandes</p>
                                         <p class="card-text mb-2"><b>Horário:</b> 12h00 (Brasil) / 16h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -589,13 +680,15 @@
                             <article class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
                                     <div>
-                                        <h3 class="card-title h5">Transformação Digital de Negócios Impulsionada por Engenharia de Inteligência Artificial</h3>
+                                        <h3 class="card-title h5">Transformação Digital de Negócios Impulsionada por
+                                            Engenharia de Inteligência Artificial</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Rogerio Rodrigues</p>
                                         <p class="card-text mb-2"><b>Horário:</b> 13h00 (Brasil) / 17h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -604,13 +697,15 @@
                             <article class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
                                     <div>
-                                        <h3 class="card-title h5">Prevenção contra Perda de Dados com o Microsoft Purview</h3>
+                                        <h3 class="card-title h5">Prevenção contra Perda de Dados com o Microsoft
+                                            Purview</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Rajir Palhares</p>
                                         <p class="card-text mb-2"><b>Horário:</b> 14h00 (Brasil) / 18h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
@@ -619,114 +714,118 @@
                             <article class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
                                     <div>
-                                        <h3 class="card-title h5">Dicas para otimizar o dia a dia desenvolvendo com Power Platform</h3>
+                                        <h3 class="card-title h5">Dicas para otimizar o dia a dia desenvolvendo com
+                                            Power Platform</h3>
                                         <p class="card-text mb-2"><b>Palestrante:</b> Allan Moura</p>
                                         <p class="card-text mb-2"><b>Horário:</b> 16h00 (Brasil) / 20h00 (Angola)</p>
                                     </div>
                                     <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
+                                        <a href="https://www.youtube.com/watch?v=pTCBcwpv-Uo"
+                                            class="btn btn-primary-custom" target="_blank" rel="noopener">Assistir no
+                                            YouTube</a>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                    </div>
-                    </div>
-                    
-
+               
                 </div>
-                <div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">Hacking Azure AI</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> André Melancia</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 7h00 (Brasil) / 11h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                            target="_blank" rel="noopener">Assistir no YouTube</a>
-                                    </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">Hacking Azure AI</h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> André Melancia</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 7h00 (Brasil) / 11h00 (Angola)</p>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">FinOps na Prática com Microsoft Fabric</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> Shalom André</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 8h00 (Brasil) / 12h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                            target="_blank" rel="noopener">Assistir no YouTube</a>
-                                    </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">Descomplicando Máquinas Virtuais no Azure: Escolhas Inteligentes e Custos Otimizados</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> Edesan Tomaz</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 9h00 (Brasil) / 13h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
-                                            target="_blank" rel="noopener">Assistir no YouTube</a>
-                                    </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">FinOps na Prática com Microsoft Fabric</h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> Shalom André</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 8h00 (Brasil) / 12h00 (Angola)</p>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">Backup de sua estrutura no Azure</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> Jefferson Castilho</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 10h00 (Brasil) / 14h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
-                                    </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">Round Table: Transformação Digital com Microsoft Copilot</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> Cláudio Rapôso / José Quintino / Marcelo Pacífico</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 11h00 (Brasil) / 15h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
-                                    </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">Descomplicando Máquinas Virtuais no Azure: Escolhas
+                                        Inteligentes e Custos Otimizados</h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> Edesan Tomaz</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 9h00 (Brasil) / 13h00 (Angola)</p>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="card h-100">
-                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
-                                    <div>
-                                        <h3 class="card-title h5">Arquitetura em AI</h3>
-                                        <p class="card-text mb-2"><b>Palestrante:</b> Fabio Silva</p>
-                                        <p class="card-text mb-2"><b>Horário:</b> 13h00 (Brasil) / 17h00 (Angola)</p>
-                                    </div>
-                                    <div class="mt-3 text-start">
-                                        <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom" target="_blank"
-                                            rel="noopener">Assistir no YouTube</a>
-                                    </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
                                 </div>
-                            </article>
-                        </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">Backup de sua estrutura no Azure</h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> Jefferson Castilho</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 10h00 (Brasil) / 14h00 (Angola)</p>
+                                </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">Round Table: Transformação Digital com Microsoft Copilot
+                                    </h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> Cláudio Rapôso / José Quintino /
+                                        Marcelo Pacífico</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 11h00 (Brasil) / 15h00 (Angola)</p>
+                                </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                                <div>
+                                    <h3 class="card-title h5">Arquitetura em AI</h3>
+                                    <p class="card-text mb-2"><b>Palestrante:</b> Fabio Silva</p>
+                                    <p class="card-text mb-2"><b>Horário:</b> 13h00 (Brasil) / 17h00 (Angola)</p>
+                                </div>
+                                <div class="mt-3 text-start">
+                                    <a href="https://www.youtube.com/watch?v=JheiySH3pxY" class="btn btn-primary-custom"
+                                        target="_blank" rel="noopener">Assistir no YouTube</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -735,7 +834,7 @@
 
     <!-- Footer -->
     <!-- Efeito de cidade nevando acima do footer -->
-    
+
     <footer class="footer text-center" style="position:relative; z-index:4; padding-bottom:0;">
         <div
             style="position:relative; width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; height:220px; overflow:hidden; z-index:2; margin-top:0; padding-top:0;">
