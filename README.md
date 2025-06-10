@@ -12,6 +12,7 @@ assets/
 pages/
   fall-2025.html - exemplo de página de edição anterior
 index.html        - página principal
+404.html          - página de erro personalizada
 ```
 
 Todo o conteúdo está dentro da pasta `assets` para facilitar a separação entre recursos estáticos e documentos HTML.
@@ -29,3 +30,28 @@ Para mitigar riscos de ataques via dependências externas:
 
 - Todos os recursos carregados de CDNs possuem **Subresource Integrity (SRI)** e o atributo `crossorigin="anonymous"`.
 - Links que abrem em nova aba utilizam `rel="noopener noreferrer"`.
+
+## Git Flow
+
+Este projeto segue o modelo [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/). O branch `main` representa o código pronto para produção e `develop` é usado para integração. Para iniciar uma nova funcionalidade:
+
+```bash
+git checkout develop
+git checkout -b feature/minha-feature
+```
+
+Ao concluir, crie um *pull request* para `develop`. Releases são criadas a partir de `develop` e *hotfixes* a partir de `main`.
+
+## Deploy com Terraform
+
+A pasta `terraform/` contém a configuração para criar três contas de armazenamento Azure Blob com hospedagem de site estático habilitada. Utilize o `terraform.tfvars` para definir os nomes das contas e o grupo de recursos.
+
+```bash
+cd terraform
+terraform init
+terraform apply
+```
+
+Os endereços das páginas serão exibidos ao final da execução.
+
+Para publicar o conteúdo do site em cada blob, utilize o script `scripts/deploy.sh` ou a *GitHub Action* definida em `.github/workflows/deploy.yml`. Defina a variável de ambiente `STORAGE_ACCOUNTS` com os nomes das contas separados por vírgula.
