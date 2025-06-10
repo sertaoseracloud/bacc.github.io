@@ -40,6 +40,12 @@ body {
     background: var(--primary-color);
     transition: background 0.4s;
 }
+.transition-navbar {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.transition-navbar.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
 .navbar-nav .nav-link {
     color: var(--font-primary) !important;

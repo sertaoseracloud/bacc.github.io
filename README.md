@@ -16,6 +16,8 @@ index.html        - página principal
 
 Todo o conteúdo está dentro da pasta `assets` para facilitar a separação entre recursos estáticos e documentos HTML.
 Todo o CSS e JavaScript residem em `assets` para manter as páginas HTML limpas.
+O script `assets/js/main.js` também controla a animação da navegação, aplicando
+uma sombra quando a página é rolada para melhorar a visibilidade.
 
 ## Licença
 
