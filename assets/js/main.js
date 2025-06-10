@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const triggerBottom = window.innerHeight * 0.92;
         animatedEls.forEach(el => {
             const boxTop = el.getBoundingClientRect().top;
-            if (boxTop < triggerBottom) {
-                el.classList.add('animated');
+            if (boxTop < triggerBottom && !el.classList.contains('animate__animated')) {
+                const anim = el.dataset.animate || 'fadeInUp';
+                el.classList.add('animate__animated', `animate__${anim}`);
             }
         });
     };

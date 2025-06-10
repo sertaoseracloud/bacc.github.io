@@ -209,13 +209,10 @@ body {
 /* Animate on scroll */
 [data-animate] {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s, transform 0.7s;
 }
 
-[data-animate].animated {
+[data-animate].animate__animated {
     opacity: 1;
-    transform: translateY(0);
 }
 
 /* Utility classes extracted from inline styles */
