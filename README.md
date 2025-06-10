@@ -33,14 +33,20 @@ Para mitigar riscos de ataques via dependências externas:
 
 ## Git Flow
 
-Este projeto segue o modelo [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/). O branch `main` representa o código pronto para produção e `develop` é usado para integração. Para iniciar uma nova funcionalidade:
+Utilizamos um fluxo simples com três ramos principais:
+
+- `dev` &ndash; desenvolvimento contínuo e integração de funcionalidades;
+- `hml` &ndash; homologação e testes finais antes de ir para produção;
+- `main` &ndash; versão estável publicada.
+
+Para iniciar uma nova funcionalidade:
 
 ```bash
-git checkout develop
+git checkout dev
 git checkout -b feature/minha-feature
 ```
 
-Ao concluir, crie um *pull request* para `develop`. Releases são criadas a partir de `develop` e *hotfixes* a partir de `main`.
+Depois de revisado em `dev`, faça *merge* para `hml`. Quando homologado, o conteúdo de `hml` é promovido para `main`. Hotfixes podem partir de `main` e ser aplicados aos demais ramos.
 
 ## Deploy com Terraform
 
