@@ -337,10 +337,18 @@ body {
     width: 140px;
     height: 100%;
     overflow: hidden;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
     flex-shrink: 0;
     display: flex;
     align-items: stretch;
+}
+
+@media (max-width: 767.98px) {
+    #organizacao .speaker-img-container {
+        width: 100% !important;
+        height: 180px !important;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
 }
 
 .speaker-img-wrapper {
