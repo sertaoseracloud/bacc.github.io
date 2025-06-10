@@ -6,6 +6,7 @@ Este repositório hospeda o código fonte do site estático do evento **BACC**. 
 
 ```
 assets/
+  css/    - folhas de estilo
   js/     - códigos JavaScript
   images/ - imagens utilizadas no site
 pages/
@@ -14,6 +15,7 @@ index.html        - página principal
 ```
 
 Todo o conteúdo está dentro da pasta `assets` para facilitar a separação entre recursos estáticos e documentos HTML.
+Todo o CSS e JavaScript residem em `assets` para manter as páginas HTML limpas.
 
 ## Licença
 
