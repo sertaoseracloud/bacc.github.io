@@ -62,3 +62,18 @@ Os endereços das páginas serão exibidos ao final da execução.
 
 Para publicar o conteúdo do site em cada blob, utilize o script `scripts/deploy.sh` ou a *GitHub Action* definida em `.github/workflows/deploy.yml`. Defina a variável de ambiente `STORAGE_ACCOUNTS` com os nomes das contas separados por vírgula.
 O workflow seleciona automaticamente o arquivo `.tfvars` de acordo com o ramo `dev`, `hml` ou `main`.
+
+### Formato do segredo do Service Principal
+
+Defina o segredo `AZURE_CREDENTIALS` no GitHub com as credenciais do Service Principal no seguinte formato JSON:
+
+```json
+{
+  "clientId": "APP_ID",
+  "clientSecret": "PASSWORD",
+  "subscriptionId": "SUBSCRIPTION_ID",
+  "tenantId": "TENANT_ID"
+}
+```
+
+Este segredo é utilizado pelo action `azure/login` para autenticar no Azure durante o deploy.
