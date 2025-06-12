@@ -1,0 +1,69 @@
+name: Deploy static website
+
+on:
+  push:
+    branches:
+      - dev
+      - hml
+      - main
+
+jobs:
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Terraform Init
+        run: terraform -chdir=terraform init
+      - name: Terraform Apply
+        run: terraform -chdir=terraform apply -auto-approve -var-file=dev.tfvars
+      - name: Deploy static content
+        run: ./scripts/deploy.sh .
+        env:
+          STORAGE_ACCOUNTS: ${{ secrets.STORAGE_ACCOUNTS }}
+
+  deploy-hml:
+    if: github.ref == 'refs/heads/hml'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Terraform Init
+        run: terraform -chdir=terraform init
+      - name: Terraform Apply
+        run: terraform -chdir=terraform apply -auto-approve -var-file=hml.tfvars
+      - name: Deploy static content
+        run: ./scripts/deploy.sh .
+        env:
+          STORAGE_ACCOUNTS: ${{ secrets.STORAGE_ACCOUNTS }}
+
+  deploy-main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Terraform Init
+        run: terraform -chdir=terraform init
+      - name: Terraform Apply
+        run: terraform -chdir=terraform apply -auto-approve -var-file=main.tfvars
+      - name: Deploy static content
+        run: ./scripts/deploy.sh .
+        env:
+          STORAGE_ACCOUNTS: ${{ secrets.STORAGE_ACCOUNTS }}
