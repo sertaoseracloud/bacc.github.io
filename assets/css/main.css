@@ -284,7 +284,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 
 .flag-icon {
@@ -355,14 +355,7 @@ body {
     align-items: stretch;
 }
 
-@media (max-width: 575.98px) {
-    #organizacao .speaker-img-container,
-    #convidados .speaker-img-container {
-        width: 100% !important;
-        height: 180px !important;
-        border-radius: 0.5rem 0.5rem 0 0;
-    }
-}
+
 
 
 .speaker-img-wrapper {
@@ -371,4 +364,8 @@ body {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
-.img-cover-h220 {\n    width: 100%;\n    height: 220px;\n    object-fit: cover;\n}
+.img-cover-h220 {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
