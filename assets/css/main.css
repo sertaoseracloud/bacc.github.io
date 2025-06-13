@@ -355,14 +355,6 @@ body {
     align-items: stretch;
 }
 
-@media (max-width: 767.98px) {
-    #organizacao .speaker-img-container,
-    #convidados .speaker-img-container {
-        width: 100% !important;
-        height: 180px !important;
-        border-radius: 0.5rem 0.5rem 0 0;
-    }
-}
 
 .speaker-img-wrapper {
     height: 220px;
